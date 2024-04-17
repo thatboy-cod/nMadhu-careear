@@ -2,53 +2,42 @@
 <html>
   <head>
     <title>Thatboy careear</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size:40px;
-        font-family:Roboto;
-        font: weight normal;
-        color: rgb(120,120,80);
-        text-align : center;
+      #banner{
+        height : 360px;
+        width:  :100%;
+        object-fit : cover;
       }
-      #banner {
-        width: 70%;
-        height: 360px;
-        object-position: cover-fit;
-        
-      }
-      h2{
-        font-size:32px;
-        font-family:Roboto;
-        font: weight normal;
-        color: rgb(150,120,120);
-        text-align: center;
-        
-        
-      }
-      .bodytext{
-        font-family:Roboto;
-        color: rgb(120,120,120)
-        
-      }
-    #conteiner {
-      max-width: 720px;
-      margin: 0 auto 0 auto ;
-    }
     </style>
+    
+    
   </head>
   <body>
-    <div id ="conteiner">
-      <h1>Thatboy Career </h1>
-      <img id ="banner" src="https://da9b3deb-74a2-44dd-afc8-f793baeeb4b7-00-2qc1tfnbqp1lv.sisko.replit.dev//static/m.jpeg">
-      <h2>About thatboy</h2>
-      <p class="bodytext">
+    <div class="container">
+      <h1 class = "text-center mt-2 mb-4">{{company_name}} Career </h1>
+      <img  class ="img-fluid" id ="banner" src="https://da9b3deb-74a2-44dd-afc8-f793baeeb4b7-00-2qc1tfnbqp1lv.sisko.replit.dev//static/m.jpeg">
+      <h2 class = "text-center mt-2 mb-4">About thatboy</h2>
+      <p class ="lead">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit amet mauris. Sed viverra tellus in hac habitasse platea dictumst. Et netus et malesuada fames ac turpis. Turpis egestas pretium aenean pharetra magna ac placerat. Massa placerat duis ultricies lacus sed turpis tincidunt id aliquet. Amet est placerat in egestas. Platea dictumst quisque sagittis purus sit. Feugiat sed lectus vestibulum mattis ullamcorper velit. Eu tincidunt tortor aliquam nulla. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. Non blandit massa enim nec.
-      </p>
-      <h2>Open Position</h2>
-      <p class = "bodytext">TODO-show the jobs </p>
-      <div style = "text-align:center;">
-      <button>Contact Us</button>
-        <p>Copyright 2024,Thatboy</p>
+      </div>
+      <h2 class ="text-center mt-2 mb-4">Open Position</h2>
+      <p>{% for job in jobs%}
+        <div styple ="margin-bottom:16px;">
+          <h4   style ="color : rgb(120,120,120);
+            margin-bottom:4px;">{{job['title']}}</h4>
+          <div>
+            <b> Location:</b>{{job["location"]}}
+        </div>
+          <div>
+            <b> Salary</b>{{job["Salary"]}}
+          </div>
+         {%endfor%}</div>
+      <div class = "text-center">
+      <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class ="mt-4">Copyright 2024,Thatboy</p>
       </div>
     </div>
     
