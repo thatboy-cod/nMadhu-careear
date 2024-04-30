@@ -20,7 +20,7 @@ JOBS =[
   {'id':4,
        'title':'Backend Engineer',
       'location':'san-francisco,Usa',
-      'Salary':'$15,00,00'
+      'Salary':'$150,000'
   }]
 @app.route("/")  
 def hello_world():
