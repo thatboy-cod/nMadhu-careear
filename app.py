@@ -8,7 +8,7 @@ JOBS =[
        ' Salary':'Rs. 10,00,000'
   },
   {'id':2,
-       'title':'Data SCientist',
+       'title':'Data Scientist',
       'location':'Delhi,Indaia',
       'Salary':'Rs 15,00,000'
   },
@@ -24,7 +24,7 @@ JOBS =[
   }]
 @app.route("/")  
 def hello_world():
-  return render_template('home.html',jobs=JOBS,company_name="Thatboys")
+  return render_template('home.html',jobs=JOBS)
 
 @app.route("/api/jobs")
 def list_jobs():
